@@ -36,4 +36,4 @@ modules:
     sources:
       - type: git
         url: https://notabug.org/Vandarin/seriousshooter.git
-        commit: 1dc80a22b0a66670c12649a9f31c37b5a09de848
+        commit: 197674a2402cee95066d1c83635632cb980ddc47

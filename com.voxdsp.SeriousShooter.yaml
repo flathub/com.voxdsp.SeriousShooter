@@ -36,4 +36,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/mrbid/SeriousShooter.git
-        commit: 197674a2402cee95066d1c83635632cb980ddc47
+        commit: 6ad3283a5ed93f03f06695c2dfe1aaa2af5a028d

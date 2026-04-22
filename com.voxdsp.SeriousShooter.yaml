@@ -1,6 +1,6 @@
 app-id: com.voxdsp.SeriousShooter
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: seriousshooter
 rename-icon: seriousshooter
@@ -11,6 +11,10 @@ finish-args:
   - --socket=fallback-x11
   - --share=ipc
   - --device=dri
+cleanup:
+  - /include
+  - /lib/cmake
+  - /lib/pkgconfig
 modules:
   - name: glfw
     buildsystem: cmake-ninja
@@ -32,8 +36,10 @@ modules:
       - install -Dm 0755 seriousshooter -t ${FLATPAK_DEST}/bin
       - install -Dm 0644 flat/seriousshooter.desktop ${FLATPAK_DEST}/share/applications/seriousshooter.desktop
       - install -Dm 0644 flat/seriousshooter.appdata.xml ${FLATPAK_DEST}/share/metainfo/seriousshooter.appdata.xml
-      - install -Dm 0644 flat/seriousshooter.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/seriousshooter.png
+      - install -Dm 0644 flat/seriousshooter.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/seriousshooter.png
     sources:
       - type: git
         url: https://github.com/mrbid/SeriousShooter.git
         commit: 741427bda8c1c38235a6da12cd3a1b4ffeeacb84
+      - type: patch
+        path: fix-appdata.patch

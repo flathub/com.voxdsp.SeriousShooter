@@ -1,0 +1,41 @@
+From 24af4230a951e4b270f6a57b875cf39db8c233ec Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Wed, 22 Apr 2026 12:15:08 +0300
+Subject: [PATCH] Fix appdata paper cuts
+
+Signed-off-by: Sabri Ünal <yakushabb@gmail.com>
+---
+ flat/seriousshooter.appdata.xml | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/flat/seriousshooter.appdata.xml b/flat/seriousshooter.appdata.xml
+index a2260bb..15589d1 100644
+--- a/flat/seriousshooter.appdata.xml
++++ b/flat/seriousshooter.appdata.xml
+@@ -21,15 +21,21 @@
+ 	</description>
+ 	<screenshots>
+ 		<screenshot type="default">
+-			<image>https://notabug.org/Vandarin/SeriousShooter/raw/master/screenshot.png</image>
++			<image>https://imgproxy.flathub.org/insecure/dpr:2/f:avif/rs:fill-down/aHR0cHM6Ly9kbC5mbGF0aHViLm9yZy9tZWRpYS9jb20vdm94ZHNwL1NlcmlvdXNTaG9vdGVyLzM1ZTcwMzJhMmIyYjZlZDE1ODFhODdhYzhmZDI3ZGQyL3NjcmVlbnNob3RzL2ltYWdlLTFfb3JpZy5wbmc</image>
+ 			<caption>SeriousShooter Screenshot</caption>
+ 		</screenshot>
+ 	</screenshots>
+ 	<url type="homepage">https://mrbid.github.io/seriousshooter</url>
++    <url type="bugtracker">https://mrbid.github.io/seriousshooter/issues</url>
++    <url type="vcs-browser">https://mrbid.github.io/seriousshooter</url>
+ 	<releases>
+ 		<release version="1.11" date="2023-12-30">
+ 			<description><ul><li>Added the Golden AK-47 on another secret keybind 🤫.</li><li>Gold colt updated to go through multiple targets at once.</li></ul></description>
+ 		</release>
+ 	</releases>
+-	<content_rating type="oars-1.0" />
++    <content_rating type="oars-1.1">
++        <content_attribute id="violence-cartoon">moderate</content_attribute>
++        <content_attribute id="violence-fantasy">moderate</content_attribute>
++        <content_attribute id="violence-realistic">mild</content_attribute>
++    </content_rating>
+ </component>
+--
+libgit2 1.7.2
+
